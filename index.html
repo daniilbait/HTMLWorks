@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <html>
- <head>
-  <!-- <style>
-    h1{
-      ;
-    }
-  </style> -->
- <title>Лаборатная работа 1</title>
- </head>
+ <head> <title>Лаборатная работа 1</title> </head>
  <body>
     <h1 id="start" align="center">Лабораторная работа 1</h1>
     <h2>Гиперссылки:</h2>
     <ul>
-      <!-- https://daniilbait.github.io/HTMLWorks/  -->
       <!--1) абсолютную гиперссылку на главную страницу сайта kubsu.ru;-->
       <li><a href="http://kubsu.ru/">1. Главная страница сайта КубГУ</a></li>
       <!--2) абсолютную на главную сайта kubsu.ru в протоколе https;-->
@@ -53,22 +45,16 @@
     </ul>
     <h2>Форма:</h2>
     <form>
-
-<!-- 5) пол (радиокнопки); -->
-<!-- 6) любимый язык программирования (множественный выбор из списка); -->
-
-
-<!-- 9) кнопка «Сохранить». -->
       <label>Введите свое ФИО:</label> <input type="text"><br><!-- 1) ФИО (текстовое поле); -->
       <label>Телефон:</label><input type="tel"><br><!-- 2) Телефон (поле tel); -->
-      <label>    e-mail</label><input type="email"><br><!-- 3) e-mail (поле email); -->
+      <label>e-mail</label><input type="email"><br><!-- 3) e-mail (поле email); -->
       <label>Дата рождения:</label> <input type="date"><br><!-- 4) дата рождения (поле даты); -->
-      <label>Ваш пол: М<input type="checkbox"> Ж <input type="checkbox"></label><br>
+      <label>Ваш пол: М<input type="radio" name="human"> Ж <input type="radio" name="human"></label><br><!-- 5) пол (радиокнопки); -->
       <label >Выберите любимый (-ые) ЯП: <select multiple>
         <option value="-">-</option>
-        <option value="pascal">Pascal</option>
-        <option value="c">C</option>
-        <option value="c++">C++</option>
+        <option value="pascal" selected="selected">Pascal</option>
+        <option value="c" selected="selected">C</option>
+        <option value="c++" selected="selected">C++</option>
         <option value="jvaScript">JavaScript</option>
         <option value="php">PHP</option>
         <option value="python">Python</option>
@@ -78,16 +64,9 @@
         <option value="prolog">Prolog</option>
         <option value="scala">Scala</option>
       </select></label><br>
-        <ul>
-          <li>Pascal<input type="checkbox"></li>
-          <li>DSDSojure<input type="checkbox"></li>
-          <li>Pascal<input type="checkbox"></li>
-          <li>lojure<input type="checkbox"></li>
-      </ul>>
       <label>Расскажите о себе:<br><textarea name="message" rows="5" cols="30"></textarea></label><br><!-- 7) биография (многострочное текстовое поле); -->
       <label><input type="checkbox"> с контрактом ознакомлен.</label><br><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
       <input type="submit"><br>
     </form>
  </body>
 </html>
-
