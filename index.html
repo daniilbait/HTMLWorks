@@ -44,12 +44,12 @@
     </ul>
     <h2>Форма:</h2>
     <form>
-      <label>Введите свое ФИО:</label> <input type="text"><br><!-- 1) ФИО (текстовое поле); -->
-      <label>Телефон:</label><input type="tel"><br><!-- 2) Телефон (поле tel); -->
-      <label>e-mail</label><input type="email"><br><!-- 3) e-mail (поле email); -->
-      <label>Дата рождения:</label> <input type="date"><br><!-- 4) дата рождения (поле даты); -->
-      <label>Ваш пол: М<input type="radio" name="human"> &nbsp&nbsp Ж</label><input type="radio" name="human"><br><!-- 5) пол (радиокнопки); -->
-      <label >Выберите любимый (-ые) ЯП: <select multiple="multiple">
+      <label>Введите свое ФИО:</label> <input type="text" required="required"><br><!-- 1) ФИО (текстовое поле); -->
+      <label>Телефон:</label><input type="tel" required="required"><br><!-- 2) Телефон (поле tel); -->
+      <label>e-mail</label><input type="email" required="required"><br><!-- 3) e-mail (поле email); -->
+      <label>Дата рождения:</label> <input type="date" required="required"><br><!-- 4) дата рождения (поле даты); -->
+      <label>Ваш пол: М<input type="radio" name="human" required="required"> &nbsp&nbsp Ж</label><input type="radio" name="human"><br><!-- 5) пол (радиокнопки); -->
+      <label >Выберите любимый (-ые) ЯП: <select multiple="multiple" required="required">
         <option value="pascal">Pascal</option>
         <option value="c">C</option>
         <option value="c++">C++</option>
@@ -62,12 +62,13 @@
         <option value="prolog">Prolog</option>
         <option value="scala">Scala</option>
       </select></label><br>
-      <label>Расскажите о себе:<br><textarea name="message" rows="5" cols="30"></textarea></label><br><!-- 7) биография (многострочное текстовое поле); -->
-      <label><input type="checkbox"> с контрактом ознакомлен.</label><br><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
+      <label>Расскажите о себе:<br><textarea name="message" rows="5" cols="30" required="required"></textarea></label><br><!-- 7) биография (многострочное текстовое поле); -->
+      <label><input type="checkbox" required="required"> с контрактом ознакомлен (-a).</label><br><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
       <input type="submit"><br>
     </form>
  </body>
 </html>
+
 
 
 
