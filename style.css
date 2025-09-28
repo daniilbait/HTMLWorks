@@ -231,7 +231,7 @@ footer
 }
 @media screen and (min-width: 961px) {
     body{width: 960px; margin: auto;}
-    h1{font-size: 300%; margin-left: 10px;}
+    h1{font-size: 200%; margin-left: 10px;}
     nav{margin: 10px;}
     nav a {flex-basis: 32%;}
     table{font-size: 120%;}
@@ -241,3 +241,4 @@ footer
     #hyperpages { margin: 10px 30px 30px 30px;}
 
   }
+
