@@ -1,55 +1,107 @@
 <!DOCTYPE html>
 <html lang="ru">
- <head> <title>Лаборатная работа 1</title> </head>
- <body>
-    <h1 id="start">Лабораторная работа 1</h1>
-    <h2>Гиперссылки:</h2>
-    <ul>
-      <!--1) абсолютную гиперссылку на главную страницу сайта kubsu.ru;-->
-      <li><a href="http://kubsu.ru/">1. Главная страница сайта КубГУ</a></li>
-      <!--2) абсолютную на главную сайта kubsu.ru в протоколе https;-->
-      <li><a href="https://kubsu.ru/">2. Главная страница сайта КубГУ (в протоколе https)</a></li>
-      <!--3) ссылку-изображение;-->
-      <li><a href="https://github.com">3.<img alt="Изображение-ссылка" src="image1.jpg" width="300" height="180"></a></li>
-      <!-- 4) сокращенную ссылку на внутреннюю страницу; -->
-      <li><a href="/HTMLWorks/Fourth.html">4. На внутреннюю страницу</a></li>
-      <!-- 5) сокращенную ссылку на главную страницу; -->
-      <li><a href="/HTMLWorks">5. На главную страницу</a></li>
-      <!-- 6) ссылку на фрагмент текущей страницы; -->
-      <li><a href="#start">6. Перейти к заголовку данной страницы</a></li>
-      <!-- 7) ссылку с тремя параметрами в URL; -->
-      <li><a href="https://www.wildberries.ru/catalog/dom/osveshchenie/nochniki?sort=popular&page=1&fcolor=16119260">7. Поиск с тремя параметрами</a></li>
-      <!-- 8) ссылку с параметром id в URL; -->
-      <!-- 9) относительную на страницу в текущем каталоге; -->
-      <li><a href="Ninth.html">9. Страница в текущем каталоге</a></li>
-      <!-- 10) относительную на страницу в каталоге about; -->
-      <li><a href="/about/Tenth.html">10. Страница в каталоге about</a></li>
-      <!-- 11) относительную на страницу в каталоге уровнем выше текущего; -->
-      <!-- 12) относительную на страницу в каталоге двумя уровнями выше; -->
-      <!-- 13) контекстную в тексте абзаца; -->
-      <li><div> 13. В последнее время студенты часто стали жаловаться на отсутствие мобильного интернета по вечерам. Взамен нестабильному мобильному сигналу проживающие в общежитии, а также посетители основного здания ВУЗа могут по следующей <a href="https://www.kubsu.ru/sites/default/files/insert/page/instrukciya_po_podklyucheniyu_k_seti_wifi_v_windows10.pdf">инструкции</a> подключиться к точки доступа wi-fi на ПК или ноутбуках.</div></li>
-      <!-- 14) ссылку на фрагмент страницы стороннего сайта; -->
-      <li><a href="https://ru.wikipedia.org/wiki/Linux#Критическая_кампания">14. Ссылка на фрагмент страницы стороннего сайта</a></li>
-      <!-- 15) ссылки из прямоугольных и круглых областей картинки (HTML-тег map); -->
-      <!-- 16) ссылку с пустым href; -->
-       <li><a href="">16. Тут пусто</a></li>
-      <!-- 17) ссылку без href; -->
-       <li><a>17. А тут вообще ничего нет</a></li>
-      <!-- 18) ссылку, по которой запрещен переход поисковикам; -->
-       <li><a href="index.html" rel="nofollow">18. Фармить криптовалюту можно здесь</a></li>
-      <!-- 19) запрещенную для индексации поисковиками; -->
-       <li><a href="index.html" rel="noindex">19. Оформить загранпаспорт</a></li>
-      <!-- 20) нумерованный список ссылок с подписями title; -->
-      <!-- 21) ссылку на файл на сервере FTP с авторизацией; -->
-    </ul>
-    <h2>Форма:</h2>
-    <form>
-      <label>Введите свое ФИО:</label> <input type="text" required="required"><br><!-- 1) ФИО (текстовое поле); -->
-      <label>Телефон:</label><input type="tel" required="required"><br><!-- 2) Телефон (поле tel); -->
-      <label>e-mail</label><input type="email" required="required"><br><!-- 3) e-mail (поле email); -->
-      <label>Дата рождения:</label> <input type="date" required="required"><br><!-- 4) дата рождения (поле даты); -->
-      <label>Ваш пол: М<input type="radio" name="human" required="required"> &nbsp;&nbsp; Ж</label><input type="radio" name="human"><br><!-- 5) пол (радиокнопки); -->
-      <label >Выберите любимый (-ые) ЯП: <select multiple="multiple" required="required">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Лаборатная работа 3</title>
+  </head>
+  <body>
+    <div class="all">
+    <header> <!-- Шапка -->
+      <img alt="логотип" class="logo" src="logo.jpg">
+      <nav class="navigation-panel">
+        <a id="nav1" href="#hyperpages">Гиперссылки</a>
+        <a id="nav2" href="#table">Таблица</a>
+        <a id="nav3" href="#form">Форма</a>
+      </nav>
+      <h1>Разработка пользовательского WEB-интерфейса</h1>
+    </header> <!-- Шапка -->
+    <div class="main">
+    <div id="hyperpages"> <!-- Гиперссылки -->
+      <h2>Гиперссылки:</h2>
+      <ul>
+        <!--1) абсолютную гиперссылку на главную страницу сайта kubsu.ru;-->
+        <li><a href="http://kubsu.ru/">1. Главная страница сайта КубГУ</a></li>
+        <!--2) абсолютную на главную сайта kubsu.ru в протоколе https;-->
+        <li><a href="https://kubsu.ru/">2. Главная страница сайта КубГУ (в протоколе https)</a></li>
+        <!--3) ссылку-изображение;-->
+        <li><a href="https://github.com">3.<img alt="Изображение-ссылка" src="image1.jpg"></a></li>
+        <!-- 4) сокращенную ссылку на внутреннюю страницу; -->
+        <li><a href="/HTMLWorks2/Fourth.html">4. На внутреннюю страницу</a></li>
+        <!-- 5) сокращенную ссылку на главную страницу; -->
+        <li><a href="/HTMLWorks2">5. На главную страницу</a></li>
+        <!-- 6) ссылку на фрагмент текущей страницы; -->
+        <li><a href="#start">6. Перейти к заголовку данн  ой страницы</a></li>
+        <!-- 7) ссылку с тремя параметрами в URL; -->
+        <li><a href="https://www.wildberries.ru/catalog/dom/osveshchenie/nochniki?sort=popular&page=1&fcolor=16119260">7. Поиск с тремя параметрами</a></li>
+        <!-- 8) ссылку с параметром id в URL; -->
+        <!-- 9) относительную на страницу в текущем каталоге; -->
+        <li><a href="Ninth.html">9. Страница в текущем каталоге</a></li>
+        <!-- 10) относительную на страницу в каталоге about; -->
+        <li><a href="/about/Tenth.html">10. Страница в каталоге about</a></li>
+        <!-- 11) относительную на страницу в каталоге уровнем выше текущего; -->
+        <!-- 12) относительную на страницу в каталоге двумя уровнями выше; -->
+        <!-- 13) контекстную в тексте абзаца; -->
+        <li><span> 13. В последнее время студенты часто стали жаловаться на отсутствие мобильного интернета по вечерам. Взамен нестабильному мобильному сигналу проживающие в общежитии, а также посетители основного здания ВУЗа могут по следующей <a href="https://www.kubsu.ru/sites/default/files/insert/page/instrukciya_po_podklyucheniyu_k_seti_wifi_v_windows10.pdf">инструкции</a> подключиться к точки доступа wi-fi на ПК или ноутбуках.</span></li>
+        <!-- 14) ссылку на фрагмент страницы стороннего сайта; -->
+        <li><a href="https://ru.wikipedia.org/wiki/Linux#Критическая_кампания">14. Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <!-- 15) ссылки из прямоугольных и круглых областей картинки (HTML-тег map); -->
+        <!-- 16) ссылку с пустым href; -->
+        <li><a href="">16. Тут пусто</a></li>
+        <!-- 17) ссылку без href; -->
+        <li><a>17. А тут вообще ничего нет</a></li>
+        <!-- 18) ссылку, по которой запрещен переход поисковикам; -->
+        <li><a href="index.html" rel="nofollow">18. Фармить криптовалюту можно здесь</a></li>
+        <!-- 19) запрещенную для индексации поисковиками; -->
+        <li><a href="index.html" rel="noindex">19. Оформить загранпаспорт</a></li>
+        <!-- 20) нумерованный список ссылок с подписями title; -->
+        <!-- 21) ссылку на файл на сервере FTP с авторизацией; -->
+      </ul>
+    </div> <!-- Гиперссылки -->
+    <table id="table"> <!-- Таблица -->
+      <tr> 
+        <td colspan="4">Расписание занятий на понедельник</td>
+      </tr>
+      <tr class="chet"> 
+        <td>Пара</td>
+        <td>Время</td>
+        <td>МО22/1</td>
+        <td>МО22/2</td>
+      </tr>
+      <tr class="nechet"> 
+        <td rowspan="2">4</td>
+        <td rowspan="2">12:40-14:00</td>
+        <td>ООП лаб</td>
+        <td rowspan="2">Разработка пользовательского WEB интерфейса лаб</td>
+      </tr>
+      <tr class="nechet">
+        <td></td> 
+      </tr>
+      <tr class="chet"> 
+        <td>5</td>
+        <td>14:10-15:30</td>
+        <td colspan="2">Теория вероятностей и математическая статистика лекция</td>
+      </tr>
+      <tr class="nechet"> 
+        <td>6</td>
+        <td>15:40-17:00</td>
+        <td colspan="2">Разработка пользовательского WEB интерфейса лекция</td>
+      </tr>
+      <tr class="chet">
+        <td>7</td>
+        <td>17:10-18:30</td>
+        <td>Математический анализ лаб</td>
+        <td></td>
+      </tr>
+    </table> <!-- Таблица -->
+    <form id="form"> <!-- Форма -->
+      <h2>Форма</h2>
+      <div class="square1"><label id="fullname">Введите свое ФИО:</label> <input class="square" type="text" required="required"></div><!-- 1) ФИО (текстовое поле); -->
+      <div class="square1"><label id="tel">Телефон:</label><input class="square" type="tel" required="required"></div><!-- 2) Телефон (поле tel); -->
+      <div class="square1"><label>e-mail:</label><input class="square" type="email" required="required"></div><!-- 3) e-mail (поле email); -->
+      <div class="square1"><label>Дата рождения:</label> <input class="square" type="date" required="required"></div><!-- 4) дата рождения (поле даты); -->
+      <div class="other"><label>Ваш пол: М<input type="radio" name="human" required="required"> &nbsp;&nbsp; Ж</label><input type="radio" name="human"></div><!-- 5) пол (радиокнопки); -->
+      <label class="other">Выберите любимый (-ые) ЯП: <select multiple="multiple" required="required">
         <option value="pascal">Pascal</option>
         <option value="c">C</option>
         <option value="c++">C++</option>
@@ -62,10 +114,14 @@
         <option value="prolog">Prolog</option>
         <option value="scala">Scala</option>
       </select></label><br>
-      <label>Расскажите о себе:<br><textarea name="message" rows="5" cols="30" required="required"></textarea></label><br><!-- 7) биография (многострочное текстовое поле); -->
-      <label><input type="checkbox" required="required"> с контрактом ознакомлен (-a).</label><br><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
-      <input type="submit"><br>
-    </form>
- </body>
+      <div class="description"><label>Расскажите о себе:<br><textarea name="message" rows="5" cols="30" required="required"></textarea></label></div><!-- 7) биография (многострочное текстовое поле); -->
+      <label id="checkbox"><input type="checkbox" required="required"> с контрактом ознакомлен (-а)</label><br><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
+      <input type="submit" id="submit" value="Подтвердить">
+    </form> <!-- Форма -->
+      </div>
+    <footer> <!-- Подвал -->
+      <p>© Байталенко Даниил, КубГУ, МО22/1</p>
+    </footer> <!-- Подвал -->
+    </div>
+  </body>
 </html>
-
