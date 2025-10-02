@@ -25,29 +25,29 @@ a:hover {color: rgb(228, 15, 15);}
 header
 {
     background-color: #F7D7B1;
-    display: flex;
-    flex-basis: 100%;
+    /* display: flex; */
+    /* flex-basis: 100%; */
     /*min-height: 120px;*/
-    flex-flow: column wrap;
+    /* flex-flow: column wrap; */
 }
 .logo
 {
-    width: 25%;
+    /* width: 25%; */
     border-radius:100%;
     margin-left: 5px;
     margin-bottom: 10px;
-    justify-content: end;
-    order: 0;
+    /* justify-content: end; */
+    /* order: 0; */
 }
 nav
 {
-    display: flex;
-    flex-flow: column nowrap;
-    order:2;
+    /* display: flex; */
+    /* flex-flow: column nowrap; */
+    /* order:2; */
     /*align-self: flex-end;*/
     /*align-content: space-around;*/
-    align-items: center;
-    width: 100%;
+    /* align-items: center; */
+    /* width: 100%; */
     margin-bottom: 5px;
 }
 nav a
@@ -71,13 +71,13 @@ nav a
 #nav3 {order:2;}
 h1/*Заголовок страницы*/
 {
-    align-self: flex-end;
-    width: 66%;
-    margin-right: 10px;
+    /* align-self: flex-end; */
+    /* width: 66%; */
+    /* margin-right: 10px; */
     font-size: 16px;
-    margin-top:-50px;
+    /* margin-top:-50px; */
     margin-bottom: 10px;
-    order:1;
+    /* order:1; */
 }
 .main
 {
@@ -241,4 +241,5 @@ footer
     #hyperpages { margin: 10px 30px 30px 30px;}
 
   }
+
 
