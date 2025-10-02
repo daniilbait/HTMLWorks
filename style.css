@@ -34,8 +34,8 @@ header
 {
     /* width: 25%; */
     border-radius:100%;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    /* margin-left: 5px; */
+    /* margin-bottom: 10px; */
     /* justify-content: end; */
     /* order: 0; */
 }
@@ -48,7 +48,7 @@ nav
     /*align-content: space-around;*/
     /* align-items: center; */
     /* width: 100%; */
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 }
 nav a
 {
@@ -76,7 +76,7 @@ h1/*Заголовок страницы*/
     /* margin-right: 10px; */
     font-size: 16px;
     /* margin-top:-50px; */
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     /* order:1; */
 }
 .main
@@ -241,5 +241,6 @@ footer
     #hyperpages { margin: 10px 30px 30px 30px;}
 
   }
+
 
 
