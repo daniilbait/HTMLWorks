@@ -6,29 +6,23 @@
     <link rel="stylesheet" href="style.css">
     <title>Лаборатная работа 4</title>
   </head>
-  <body>
-    <div class="all">
-    <header class="container-fluid">
-      <div class="row justify-content-between align-items-center">
-        <div class="col-2">
-          <img class="logo ms-1 mb-2" src="logo.jpg" alt="логотип">
-        </div>
-        <div class="col-8">
-          <h1 class="text-end me-2 mb-2">Разработка пользовательского WEB-интерфейса</h1>
-        </div>
+  <body class="w-100 fs-sm-6">
+    <div class="all d-flex flex-row flex-wrap justify-content-center w-100">
+    <header class="container-fluid"> <!-- Шапка -->
+      <div class="row align-items-center align-items-sm-start">
+        <div class="order-sm-0 col-4 col-sm-3 m-sm-1"><img alt="логотип" class="logo w-100 ms-1 mb-2" src="logo.jpg"></div>
+        <div class="order-sm-2 col-8 col-sm-12 m-sm-1"><h1 class="text-end text-wrap fs-4" >Разработка пользовательского WEB-интерфейса</h1></div>
+        <div class="order-sm-1 col-12 col-sm-9 m-sm-1"><nav class="d-flex flex-column flex-sm-row flex-sm-nowrap align-items-center mb-1">
+          <a class="nav-btn order-1 order-sm-1 my-1 flex-sm-grow-1" id="nav1" href="#hyperpages">Гиперссылки</a>
+          <a class="nav-btn order-0 order-sm-1 my-1 flex-sm-grow-1 mx-sm-1" id="nav2" href="#table">Таблица</a>
+          <a class="nav-btn order-2 order-sm-1 my-1 flex-sm-grow-1" id="nav3" href="#form">Форма</a>
+        </nav></div>
       </div>
-      <div class="row">
-        <nav class="col-12 d-flex flex-column align-items-center mb-1">
-          <a id="nav1" href="#hyperpages" class="nav-btn">Гиперссылки</a>
-          <a id="nav2" href="#table" class="nav-btn">Таблица</a>
-          <a id="nav3" href="#form" class="nav-btn">Форма</a>
-        </nav>
-      </div>
-    </header><!-- Шапка -->
-    <div class="main">
-    <div id="hyperpages"> <!-- Гиперссылки -->
-      <h2>Гиперссылки:</h2>
-      <ul>
+    </header> <!-- Шапка -->
+    <div class="main d-flex flex-column flex-nowrap justify-content-between">
+    <div id="hyperpages" class="order-1 order-sm-1 mx-1 mt-1"> <!-- Гиперссылки -->
+      <h2 class="ms-2 mt-1">Гиперссылки:</h2>
+      <ul class="ms-2">
         <!--1) абсолютную гиперссылку на главную страницу сайта kubsu.ru;-->
         <li><a href="http://kubsu.ru/">1. Главная страница сайта КубГУ</a></li>
         <!--2) абсолютную на главную сайта kubsu.ru в протоколе https;-->
@@ -67,7 +61,7 @@
         <!-- 21) ссылку на файл на сервере FTP с авторизацией; -->
       </ul>
     </div> <!-- Гиперссылки -->
-    <table id="table"> <!-- Таблица -->
+    <table id="table" class="order-sm-1 mx-auto fs-sm-6 my-3 text-center align-self-center"> <!-- Таблица -->
       <tr> 
         <td colspan="4">Расписание занятий на понедельник</td>
       </tr>
@@ -103,14 +97,14 @@
         <td></td>
       </tr>
     </table> <!-- Таблица -->
-    <form id="form"> <!-- Форма -->
-      <h2>Форма</h2>
-      <div class="square1"><label id="fullname">Введите свое ФИО:</label> <input class="square" type="text" required="required"></div><!-- 1) ФИО (текстовое поле); -->
-      <div class="square1"><label id="tel">Телефон:</label><input class="square" type="tel" required="required"></div><!-- 2) Телефон (поле tel); -->
-      <div class="square1"><label>e-mail:</label><input class="square" type="email" required="required"></div><!-- 3) e-mail (поле email); -->
-      <div class="square1"><label>Дата рождения:</label> <input class="square" type="date" required="required"></div><!-- 4) дата рождения (поле даты); -->
-      <div class="other"><label>Ваш пол: М<input type="radio" name="human" required="required"> &nbsp;&nbsp; Ж</label><input type="radio" name="human"></div><!-- 5) пол (радиокнопки); -->
-      <label class="other">Выберите любимый (-ые) ЯП: <select multiple="multiple" required="required">
+    <form id="form" class="order-2 order-sm-1 col-11 mx-auto d-flex flex-column align-self-center my-1 p-1"> <!-- Форма -->
+      <h2 class="mb-2">Форма</h2>
+      <div class="square1 d-flex flex-row justify-content-between mb-1"><label id="fullname">Введите свое ФИО:</label> <input class="square" type="text" required="required"></div><!-- 1) ФИО (текстовое поле); -->
+      <div class="square1 d-flex flex-row justify-content-between mb-1"><label id="tel">Телефон:</label><input class="square" type="tel" required="required"></div><!-- 2) Телефон (поле tel); -->
+      <div class="square1 d-flex flex-row justify-content-between mb-1"><label>e-mail:</label><input class="square" type="email" required="required"></div><!-- 3) e-mail (поле email); -->
+      <div class="square1 d-flex flex-row justify-content-between mb-0"><label>Дата рождения:</label> <input class="square" type="date" required="required"></div><!-- 4) дата рождения (поле даты); -->
+      <div class="other mt-1"><label>Ваш пол: М<input type="radio" name="human" required="required"> &nbsp;&nbsp; Ж</label><input type="radio" name="human"></div><!-- 5) пол (радиокнопки); -->
+      <label class="other mt-1">Выберите любимый (-ые) ЯП: <select multiple="multiple" required="required">
         <option value="pascal">Pascal</option>
         <option value="c">C</option>
         <option value="c++">C++</option>
@@ -122,18 +116,16 @@
         <option value="clojure">Clojure</option>
         <option value="prolog">Prolog</option>
         <option value="scala">Scala</option>
-      </select></label><br>
-      <div class="description"><label>Расскажите о себе:<br><textarea name="message" rows="5" cols="30" required="required"></textarea></label></div><!-- 7) биография (многострочное текстовое поле); -->
-      <label id="checkbox"><input type="checkbox" required="required"> с контрактом ознакомлен (-а)</label><br><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
-      <input type="submit" id="submit" value="Подтвердить">
+      </select></label>
+      <div class="description mt-1"><label>Расскажите о себе:<textarea class="ms-1" name="message" rows="5" cols="30" required="required"></textarea></label></div><!-- 7) биография (многострочное текстовое поле); -->
+      <label id="checkbox" class="ms-2"><input type="checkbox" required="required"> с контрактом ознакомлен (-а)</label><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
+      <input class="mb-1" type="submit" id="submit" value="Подтвердить">
     </form> <!-- Форма -->
       </div>
-    <footer> <!-- Подвал -->
+    <footer class="w-100"> <!-- Подвал -->
       <p>© Байталенко Даниил, КубГУ, МО22/1</p>
     </footer> <!-- Подвал -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
