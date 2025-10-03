@@ -5,12 +5,11 @@
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
-    font-family: 'Times New Roman';
+    font-family: 'Times New Roman', Times, serif;
 }
 body
 {
-    margin:0;
-    font-size: 0.75rem;
+    font-size: 0.825rem;
 }
 div.all
 { 
@@ -42,21 +41,26 @@ nav a
 }
 h1/*Заголовок страницы*/
 {
-    font-size: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+h2
+{
+    font-size: 1.125rem;
     font-weight: bold;
 }
 #hyperpages img
 {
     width: 40%;
+    max-width: 300px;
     height: fit-content;
 }
-#hyperpages h2{font-size: 1.25rem; }
 table/*Таблица*/
 {
     width:auto;
     border: 3px solid black;
     border-spacing: 0;
-    font-size: 10px;
+    font-size: 0.725rem;
     
 }
 tr{height: 20px;}
@@ -71,7 +75,7 @@ tr:first-child
 tr:nth-child(2)
 {
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 tr:nth-child(5), tr:nth-child(6), tr:nth-child(7)
@@ -95,9 +99,7 @@ tr:nth-child(2) td:nth-child(3), td:nth-child(4)
 }
 #form h2
 {
-    font-size: 1.25rem;
     align-self: center;
-    margin-bottom: 2px;
 }
 #form .square, #submit
 {
@@ -109,24 +111,98 @@ tr:nth-child(2) td:nth-child(3), td:nth-child(4)
 }
 footer
 {
+    font-style: oblique;
     background-color: yellow;
 }
 @media (min-width:380px) {
-    table {font-size: 14px;}
-    tr:nth-child(1) {font-size: 18px;}
-    tr:nth-child(2) {font-size: 16px;}
-    
+    body, tr:nth-child(2)
+    {
+        font-size: 1rem;
+    }
+    h1
+    {
+        font-size: 1.5rem;
+    }
+    h2
+    {
+        font-size: 1.25rem;
+    }
+    table
+    {
+        font-size: 0.825rem;
+    }
+    tr:nth-child(1)
+    {
+        font-size: 1.125rem;
+    }
 }
 @media (min-width:400px){
-    #form {width: 350px; padding: 10px;}
+    #form
+    {
+        width: 360px;
+    }
+}
+@media (min-width:768px) {
+    body, tr:nth-child(2)
+    {
+        font-size: 1.125rem;
+    }
+    h1
+    {
+        font-size: 1.725rem;
+    }
+    h2
+    {
+        font-size: 1.5rem;
+    }
+    table
+    {
+        font-size: 1.0rem;
+    }
+    tr:nth-child(1)
+    {
+        font-size: 1.25rem;
+    }
+    #form
+    {
+        width: 400px;
+    }
 }
 @media screen and (min-width: 961px) {
-    body{width: 960px; margin: auto;}
-    h1{font-size: 24px; margin-left: 10px;}
-    table{font-size: 120%;}
-    tr td {padding: 10px;}
-    tr:first-child { font-size: 140%;}
-    tr:nth-child(2) { font-size: 100%;}
-    #hyperpages { margin: 10px 30px 30px 30px;}
-
-  }
+    body, tr:nth-child(2)
+    {
+        font-size: 1.25rem;
+    }
+    h1
+    {
+        font-size: 2rem;
+    }
+    h2
+    {
+        font-size: 1.75rem;
+    }
+    table
+    {
+        font-size: 1.125rem;
+    }
+    tr:nth-child(1)
+    {
+        font-size: 1.5rem;
+    }
+    tr td
+    {
+        padding: 10px;
+    }
+    tr:first-child
+    {
+        font-size: 140%;
+    }
+    tr:nth-child(2)
+    {
+        font-size: 100%;
+    }
+    #form
+    {
+        width: 440px;
+    }
+}
