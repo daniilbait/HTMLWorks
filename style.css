@@ -11,129 +11,34 @@ body
 {
     font-size: 0.825rem;
 }
-div.all
-{ 
-    background-color: #7bffab;
-}
-a:hover {color: rgb(228, 15, 15);}
-header
-{
-    background-color: #F7D7B1;
-}
-.logo
-{
-    border-radius:100%;
-}
-nav a
-{
-    width: 95%;
-    background-color: #ffc1c1ff;
-    border: 1px solid #000000;
-    border-radius: 10px 0;
-    
-    
-    text-decoration: none;
-    text-align: center;
-    color:#000;
-    font-size: 1.125rem;
-    font-weight: bold;
-    font-style: oblique;
-}
-h1/*Заголовок страницы*/
+h1
 {
     font-size: 1.25rem;
     font-weight: bold;
-}
-h2
-{
-    font-size: 1.125rem;
-    font-weight: bold;
-}
-#hyperpages img
-{
-    width: 40%;
-    max-width: 300px;
-    height: fit-content;
-}
-table/*Таблица*/
-{
-    width:auto;
-    border: 3px solid black;
-    border-spacing: 0;
-    font-size: 0.725rem;
-    
-}
-tr{height: 20px;}
-tr.chet     {background-color: #3ae1ff;}
-tr.nechet   {background-color: #f1d9b2;}
-tr:first-child
-{
-    background-color: rgb(85, 181, 255);
-    font-size: 1rem;
-    font-weight: bold;
-}
-tr:nth-child(2)
-{
     text-align: center;
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-tr:nth-child(5), tr:nth-child(6), tr:nth-child(7)
-{
-    height: 40px;
-}
-tr td 
-{
-    vertical-align: middle;
-    border: 1px solid black;
-    min-width: 35px;
-}
-tr:nth-child(2) td:nth-child(3), td:nth-child(4)
-{
-    width:240px;
 }
 #form
 {
-    background-color: chartreuse;
+    background-color: rgb(172, 254, 89);
     border: 3px solid black;
 }
-#form h2
-{
-    align-self: center;
-}
-#form .square, #submit
+.square, #selection, button
 {
     border: 2px solid black;
 }
-#form textarea
+span
 {
-    width: 95%;
-}
-footer
-{
-    font-style: oblique;
-    background-color: yellow;
+    background-color: rgba(150, 147, 147, 0.726);
+    
 }
 @media (min-width:380px) {
-    body, tr:nth-child(2)
+    body
     {
         font-size: 1rem;
     }
     h1
     {
         font-size: 1.5rem;
-    }
-    h2
-    {
-        font-size: 1.25rem;
-    }
-    table
-    {
-        font-size: 0.825rem;
-    }
-    tr:nth-child(1)
-    {
-        font-size: 1.125rem;
     }
 }
 @media (min-width:400px){
@@ -142,8 +47,8 @@ footer
         width: 360px;
     }
 }
-@media (min-width:660px) {
-    body, tr:nth-child(2)
+@media (min-width:668px) {
+    body
     {
         font-size: 1.125rem;
     }
@@ -151,25 +56,13 @@ footer
     {
         font-size: 1.725rem;
     }
-    h2
-    {
-        font-size: 1.5rem;
-    }
-    table
-    {
-        font-size: 1.0rem;
-    }
-    tr:nth-child(1)
-    {
-        font-size: 1.25rem;
-    }
     #form
     {
         width: 400px;
     }
 }
-@media screen and (min-width: 860px) {
-    body, tr:nth-child(2)
+@media screen and (min-width: 861px) {
+    body
     {
         font-size: 1.25rem;
     }
@@ -177,33 +70,4 @@ footer
     {
         font-size: 2rem;
     }
-    h2
-    {
-        font-size: 1.75rem;
-    }
-    table
-    {
-        font-size: 1.125rem;
-    }
-    tr:nth-child(1)
-    {
-        font-size: 1.5rem;
-    }
-    tr td
-    {
-        padding: 10px;
-    }
-    tr:first-child
-    {
-        font-size: 140%;
-    }
-    tr:nth-child(2)
-    {
-        font-size: 100%;
-    }
-    #form
-    {
-        width: 440px;
-    }
 }
-
