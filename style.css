@@ -27,7 +27,7 @@ body
     border-radius: 5%;
 }
 .slider .slick-slide {
-    height: 200px; /* Фиксированная высота для всех слайдов */
+    height: 300px; /* Фиксированная высота для всех слайдов */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,4 +118,5 @@ body
         font-size: 25px;
     }
 }
+
 
