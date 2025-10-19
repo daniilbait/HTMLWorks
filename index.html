@@ -19,6 +19,18 @@
     <title>Лабораторная работа 6</title>
     <script defer>
       $(document).ready(function() {
+        function updatePager() {
+          var currentSlide = $('.slider').slick('slickCurrentSlide');
+          var slidesToShow = $('.slider').slick('getOption', 'slidesToShow');
+          var totalSlides = $('.slider').slick('getSlick').slideCount;
+          
+          var lastVisibleSlide = Math.min(currentSlide + slidesToShow - 1, totalSlides - 1);
+          var currentPage = Math.floor(lastVisibleSlide / slidesToShow) + 1;
+          var totalPages = Math.ceil(totalSlides / slidesToShow);
+          
+          $('#current').text(currentPage);
+          $('#summary').text(totalPages);
+        }
         // Базовая инициализация слайдера
         $('.slider').slick({
           slidesToShow: 3,  // Mobile First: по умолчанию 1 изображение
@@ -35,25 +47,14 @@
             }
           ]
         });
-        function updatePager() {
-          var currentSlide = $('.slider').slick('slickCurrentSlide');
-          var slidesToShow = $('.slider').slick('getOption', 'slidesToShow');
-          var totalSlides = $('.slider').slick('getSlick').slideCount;
-          
-          var lastVisibleSlide = Math.min(currentSlide + slidesToShow - 1, totalSlides - 1);
-          var currentPage = Math.floor(lastVisibleSlide / slidesToShow) + 1;
-          var totalPages = Math.ceil(totalSlides / slidesToShow);
-          
-          $('#current').text(currentPage);
-          $('#summary').text(totalPages);
-        }
+        
         // Обновляем пейджер при изменении слайда
         $('.slider').on('afterChange', function(event, slick, currentSlide) {
           updatePager();
         });
 
         // Обновляем пейджер при инициализации
-        $('.slider').on('init', function(event, slick) {
+        $('.slider').on('setPosition', function(event, slick) {
           updatePager();
         });
 
