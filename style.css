@@ -11,40 +11,72 @@ body
 {
     font-size: 0.825rem;
 }
-h1
+.mygallery
 {
-    font-size: 1.25rem;
-    font-weight: bold;
+    background-color: silver;
+}
+.slider {
+    max-width: 100%; /* Ограничим общую ширину слайдера */
+    margin: 0 auto;
+    padding: 0 40px;
+    /* box-sizing: border-box; */
+}
+.slider .mypr
+{
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.slider .slick-slide {
+    height: 200px; /* Фиксированная высота для всех слайдов */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px; /* Добавляем горизонтальные отступы */
+}
+
+.slider .slick-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Вся картинка видна */
+}
+
+/* Стили для стрелок */
+.slick-prev, .slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+}
+
+.slick-prev {
+    left: 1px;  
+}
+
+.slick-next {
+    right: 1px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 40px;
+    color: #333;
+    opacity: 0.7;
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+    opacity: 1;
+}
+.custom-pager {
     text-align: center;
+    width: 100%;
 }
-#form
-{
-    background-color: rgb(172, 254, 89);
-    border: 3px solid black;
-}
-.square, #selection, button
-{
-    border: 2px solid black;
-}
-span
-{
-    background-color: rgba(150, 147, 147, 0.726);
-    
+@media (min-width: 561px) {
+    .slider {
+        max-width: 960px; /* Ограничиваем ширину на десктопе */
+    }
 }
 @media (min-width:380px) {
     body
     {
         font-size: 1rem;
-    }
-    h1
-    {
-        font-size: 1.5rem;
-    }
-}
-@media (min-width:400px){
-    #form
-    {
-        width: 360px;
     }
 }
 @media (min-width:668px) {
@@ -52,22 +84,34 @@ span
     {
         font-size: 1.125rem;
     }
-    h1
-    {
-        font-size: 1.725rem;
-    }
-    #form
-    {
-        width: 400px;
-    }
 }
 @media screen and (min-width: 861px) {
     body
     {
         font-size: 1.25rem;
     }
-    h1
-    {
-        font-size: 2rem;
+}
+@media (max-width: 560px) {
+    .slider {
+        padding: 0 30px;
+    }
+    .slick-prev, .slick-next {
+    width: 30px;
+    height: 30px;
+}
+    .slick-prev:before, .slick-next:before {
+        font-size: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .slider {
+        padding: 0 25px;
+    }
+    .slick-prev, .slick-next {
+    width: 25px;
+    height: 25px;
+}
+    .slick-prev:before, .slick-next:before {
+        font-size: 25px;
     }
 }
