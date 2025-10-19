@@ -31,39 +31,31 @@
           $('#current').text(currentPage);
           $('#summary').text(totalPages);
         }
-        // Базовая инициализация слайдера
         $('.slider').slick({
-          slidesToShow: 3,  // Mobile First: по умолчанию 1 изображение
+          slidesToShow: 3,е
           slidesToScroll: 1,
           arrows: true,
           infinite: false,
           responsive: [
             {
-              breakpoint: 561,  // Для экранов >560px
+              breakpoint: 561,
               settings: 
               {
-                  slidesToShow: 1  // Показываем 3 изображения
+                  slidesToShow: 1
               }
             }
           ]
         });
-        
-        // Обновляем пейджер при изменении слайда
         $('.slider').on('afterChange', function(event, slick, currentSlide) {
           updatePager();
         });
-
-        // Обновляем пейджер при инициализации
         $('.slider').on('setPosition', function(event, slick) {
           updatePager();
         });
-
-        // Обновляем пейджер при изменении размера окна
         $(window).on('resize', function() {
-          setTimeout(updatePager, 100); // Небольшая задержка для стабилизации
+          setTimeout(updatePager, 100);
         });
       });
-      
     </script>
   </head>
   <body>
@@ -87,3 +79,4 @@
     <!--Подключение Bootstrap 5-->
   </body>
 </html>
+
