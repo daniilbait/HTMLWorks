@@ -1,83 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!--Подключение Bootstrap 5-->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-    <!--Подключение Bootstrap 5-->
-    <!--Подключение Slick Slider CSS-->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-    <!--Подключение Slick Slider CSS-->
-    <!--Подключение библиотек для JS-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--Подключение библиотек для JS-->
-    <!--Задаем изменение размера пикселей для телефонов-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Задаем изменение размера пикселей для телефонов-->
     <link rel="stylesheet" href="style.css">
-    <title>Лабораторная работа 6</title>
-    <script defer>
-      $(document).ready(function() {
-        function updatePager() {
-          var currentSlide = $('.slider').slick('slickCurrentSlide');
-          var slidesToShow = $('.slider').slick('getOption', 'slidesToShow');
-          var totalSlides = $('.slider').slick('getSlick').slideCount;
-          
-          var lastVisibleSlide = Math.min(currentSlide + slidesToShow - 1, totalSlides - 1);
-          var currentPage = Math.floor(lastVisibleSlide / slidesToShow) + 1;
-          var totalPages = Math.ceil(totalSlides / slidesToShow);
-          
-          $('#current').text(currentPage);
-          $('#summary').text(totalPages);
-        }
-        $('.slider').slick({
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          arrows: true,
-          infinite: false,
-          responsive: [
-            {
-              breakpoint: 561,
-              settings: 
-              {
-                  slidesToShow: 1
-              }
-            }
-          ]
-        });
-        $('.slider').on('afterChange', function(event, slick, currentSlide) {
-          updatePager();
-        });
-        $('.slider').on('setPosition', function(event, slick) {
-          updatePager();
-        });
-        $(window).on('resize', function() {
-          setTimeout(updatePager, 100);
-        });
-      });
-    </script>
+    <title>Лаборатная работа 4</title>
   </head>
-  <body>
-    <div class="mygallery mx-auto mt-2">
-      <div class="slider">
-            <div class="mypr"><img src="https://sun138-2.userapi.com/s/v1/ig2/HvzrA1KE8t3RVmXPTgNPC9MS8RugeoOgc9XoPXaX-ZOWF34f7vTNpC1a8FOm4XDFyp-VuFRWuJl1mIpAkIcgD72t.jpg?quality=95&as=32x39,48x59,72x88,108x132,160x196,240x293,360x440,480x587,540x660,640x782,720x880,1080x1320,1280x1565,1440x1760,2094x2560&from=bu&cs=1280x0" class="img-fluid" alt="Изображение 1"></div>
-            <div class="mypr"><img src="https://sun138-1.userapi.com/s/v1/ig2/Vv4heUGkAg3gzGIH_J_SMh0ly-CvJBpfWVDnKIJi4aeRYt2UVSUZ1QjQQvQ9XR8nH5LSpSah4zK_uLkRVnbj1gmX.jpg?quality=95&as=32x39,48x59,72x88,108x132,160x196,240x293,360x440,480x587,540x660,640x782,720x880,1080x1320,1280x1565,1440x1760,2094x2560&from=bu&cs=1280x0" class="img-fluid" alt="Изображение 2"></div>
-            <div class="mypr"><img src="https://sun138-2.userapi.com/s/v1/ig2/iDL-GFG-a6eyT21SOqjQzYgy4vl6TyuZo4Fom_cTtdrMM0hFggFZ5pJlen3YZeat7XyXlmS94xJyqZ04-kWUwwcy.jpg?quality=95&as=32x39,48x59,72x88,108x132,160x196,240x294,360x440,480x587,540x660,640x783,720x881,1080x1321,1280x1566,1440x1761,2093x2560&from=bu&cs=1280x0" class="img-fluid" alt="Изображение 3"></div>
-            <div class="mypr"><img src="https://sun138-1.userapi.com/s/v1/ig2/3dgUcCAd3TJN8d_FFYSOB-Kb5WxJdUtj_q7Jpt0jJgFR2Fcw7hb2oq1blG68E92K6rsPIEy0yBjNCi17O3pgQHru.jpg?quality=95&as=32x39,48x59,72x88,108x132,160x196,240x293,360x440,480x587,540x660,640x782,720x880,1080x1320,1280x1565,1440x1760,2094x2560&from=bu&cs=1280x0" class="img-fluid" alt="Изображение 4"></div>
-            <div class="mypr"><img src="https://sun138-1.userapi.com/s/v1/ig2/MYoZMTreVxevQBpRMQPyYdu8H69ETPbO_cqEqc8SnoUGGsFwn3NCbI2h7wecg3InFQOVSf2Tez3MEWiftQFLcmju.jpg?quality=95&as=32x39,48x59,72x88,108x132,160x196,240x294,360x440,480x587,540x660,640x783,720x881,1080x1321,1280x1566,1440x1761,2093x2560&from=bu&cs=1280x0" class="img-fluid" alt="Изображение 5"></div>
-            <div class="mypr"><img src="https://sun9-78.userapi.com/s/v1/ig2/ZpSv5SJP5iTabKOQ3epTxubEH3NHaQoD198-AN_fKyhr-D8rebcOAUz7z8mdsnce7tBgMziPEjMPw1p5zoT4BcT0.jpg?quality=95&as=32x44,48x66,72x99,108x149,160x221,240x332,360x497,480x663,540x746,640x884,700x967&from=bu&cs=700x0" class="img-fluid" alt="Изображение 6"></div>
-            <div class="mypr"><img src="https://sun9-15.userapi.com/s/v1/ig2/gr0d9sz8SCZgJasEJ6FNFtT2NPatHIHMrZscB6Z7kR-sGeSSOzdEiS1E_gu205J-nV0Y70ypMIMcc_LN4lyFtumr.jpg?quality=95&as=32x39,48x58,72x87,108x131,160x194,240x291,360x437,480x582,540x655,640x776,720x874,1055x1280&from=bu&cs=1055x0" class="img-fluid" alt="Изображение 7"></div>
-            <div class="mypr"><img src="https://sun9-34.userapi.com/s/v1/if2/6IRfMoBXIdY2iS7FW4gVcNsagiSfhETrh4gW8U83ocwBg7syvB6codP4zo89cFKyZyD4Vqo_rCCzp6lWW9uoAjyI.jpg?quality=95&as=32x15,48x23,72x34,108x52,160x77,240x115,360x172,480x230,540x258,640x306,720x344,1080x517,1200x574&from=bu&cs=1200x0" class="img-fluid" alt="Изображение 8"></div>
+  <body class="container-lg m-auto p-0">
+    <div class="all d-flex flex-row flex-wrap justify-content-center w-100">
+    <header class="container-fluid"> <!-- Шапка -->
+      <div class="row align-items-center align-items-sm-start">
+        <div class="order-sm-0 col-3 col-sm-2"><img alt="логотип" class="logo w-100 ms-1 mb-2" src="logo.jpg"></div>
+        <div class="order-sm-2 col-9 col-sm-12 m-sm-1"><h1 class="text-end text-wrap" >Разработка пользовательского WEB-интерфейса</h1></div>
+        <div class="order-sm-1 col-12 col-sm-10"><nav class="d-flex flex-column flex-sm-row flex-sm-nowrap align-items-center mb-1">
+          <a class="nav-btn order-1 order-sm-1 my-1 flex-sm-grow-1" id="nav1" href="#hyperpages">Гиперссылки</a>
+          <a class="nav-btn order-0 order-sm-1 my-1 flex-sm-grow-1 mx-sm-1" id="nav2" href="#table">Таблица</a>
+          <a class="nav-btn order-2 order-sm-1 my-1 flex-sm-grow-1" id="nav3" href="#form">Форма</a>
+        </nav></div>
       </div>
-      <div class="custom-pager text-center mt-2">
-        <span id="current">1</span> / <span id="summary">3</span>
+    </header> <!-- Шапка -->
+    <div class="main d-flex flex-column flex-nowrap justify-content-between">
+    <div id="hyperpages" class="order-1 order-sm-1 mx-1 mt-1 m-lg-3"> <!-- Гиперссылки -->
+      <h2 class="ms-2 mt-1">Гиперссылки:</h2>
+      <ul class="ms-2">
+        <!--1) абсолютную гиперссылку на главную страницу сайта kubsu.ru;-->
+        <li><a href="http://kubsu.ru/">1. Главная страница сайта КубГУ</a></li>
+        <!--2) абсолютную на главную сайта kubsu.ru в протоколе https;-->
+        <li><a href="https://kubsu.ru/">2. Главная страница сайта КубГУ (в протоколе https)</a></li>
+        <!--3) ссылку-изображение;-->
+        <li><a href="https://github.com">3.<img alt="Изображение-ссылка" src="image1.jpg"></a></li>
+        <!-- 4) сокращенную ссылку на внутреннюю страницу; -->
+        <li><a href="/HTMLWorks2/Fourth.html">4. На внутреннюю страницу</a></li>
+        <!-- 5) сокращенную ссылку на главную страницу; -->
+        <li><a href="/HTMLWorks2">5. На главную страницу</a></li>
+        <!-- 6) ссылку на фрагмент текущей страницы; -->
+        <li><a href="#start">6. Перейти к заголовку данн  ой страницы</a></li>
+        <!-- 7) ссылку с тремя параметрами в URL; -->
+        <li><a href="https://www.wildberries.ru/catalog/dom/osveshchenie/nochniki?sort=popular&page=1&fcolor=16119260">7. Поиск с тремя параметрами</a></li>
+        <!-- 8) ссылку с параметром id в URL; -->
+        <!-- 9) относительную на страницу в текущем каталоге; -->
+        <li><a href="Ninth.html">9. Страница в текущем каталоге</a></li>
+        <!-- 10) относительную на страницу в каталоге about; -->
+        <li><a href="/about/Tenth.html">10. Страница в каталоге about</a></li>
+        <!-- 11) относительную на страницу в каталоге уровнем выше текущего; -->
+        <!-- 12) относительную на страницу в каталоге двумя уровнями выше; -->
+        <!-- 13) контекстную в тексте абзаца; -->
+        <li><span> 13. В последнее время студенты часто стали жаловаться на отсутствие мобильного интернета по вечерам. Взамен нестабильному мобильному сигналу проживающие в общежитии, а также посетители основного здания ВУЗа могут по следующей <a href="https://www.kubsu.ru/sites/default/files/insert/page/instrukciya_po_podklyucheniyu_k_seti_wifi_v_windows10.pdf">инструкции</a> подключиться к точки доступа wi-fi на ПК или ноутбуках.</span></li>
+        <!-- 14) ссылку на фрагмент страницы стороннего сайта; -->
+        <li><a href="https://ru.wikipedia.org/wiki/Linux#Критическая_кампания">14. Ссылка на фрагмент страницы стороннего сайта</a></li>
+        <!-- 15) ссылки из прямоугольных и круглых областей картинки (HTML-тег map); -->
+        <!-- 16) ссылку с пустым href; -->
+        <li><a href="">16. Тут пусто</a></li>
+        <!-- 17) ссылку без href; -->
+        <li><a>17. А тут вообще ничего нет</a></li>
+        <!-- 18) ссылку, по которой запрещен переход поисковикам; -->
+        <li><a href="index.html" rel="nofollow">18. Фармить криптовалюту можно здесь</a></li>
+        <!-- 19) запрещенную для индексации поисковиками; -->
+        <li><a href="index.html" rel="noindex">19. Оформить загранпаспорт</a></li>
+        <!-- 20) нумерованный список ссылок с подписями title; -->
+        <!-- 21) ссылку на файл на сервере FTP с авторизацией; -->
+      </ul>
+    </div> <!-- Гиперссылки -->
+    <table id="table" class="order-sm-1 mx-auto my-3 text-center align-self-center"> <!-- Таблица -->
+      <tr> 
+        <td colspan="4">Расписание занятий на понедельник</td>
+      </tr>
+      <tr class="chet"> 
+        <td>Пара</td>
+        <td>Время</td>
+        <td>МО22/1</td>
+        <td>МО22/2</td>
+      </tr>
+      <tr class="nechet"> 
+        <td rowspan="2">4</td>
+        <td rowspan="2">12:40-14:00</td>
+        <td>ООП лаб</td>
+        <td rowspan="2">Разработка пользовательского WEB интерфейса лаб</td>
+      </tr>
+      <tr class="nechet">
+        <td></td> 
+      </tr>
+      <tr class="chet"> 
+        <td>5</td>
+        <td>14:10-15:30</td>
+        <td colspan="2">Теория вероятностей и математическая статистика лекция</td>
+      </tr>
+      <tr class="nechet"> 
+        <td>6</td>
+        <td>15:40-17:00</td>
+        <td colspan="2">Разработка пользовательского WEB интерфейса лекция</td>
+      </tr>
+      <tr class="chet">
+        <td>7</td>
+        <td>17:10-18:30</td>
+        <td>Математический анализ лаб</td>
+        <td></td>
+      </tr>
+    </table> <!-- Таблица -->
+    <form id="form" class="order-2 order-sm-1 col-11 mx-auto d-flex flex-column align-self-center my-1 p-1"> <!-- Форма -->
+      <h2 class="mb-2">Форма</h2>
+      <div class="square1 d-flex flex-row justify-content-between mb-1"><label id="fullname">Введите свое ФИО:</label> <input class="square" type="text" required="required"></div><!-- 1) ФИО (текстовое поле); -->
+      <div class="square1 d-flex flex-row justify-content-between mb-1"><label id="tel">Телефон:</label><input class="square" type="tel" required="required"></div><!-- 2) Телефон (поле tel); -->
+      <div class="square1 d-flex flex-row justify-content-between mb-1"><label>e-mail:</label><input class="square" type="email" required="required"></div><!-- 3) e-mail (поле email); -->
+      <div class="square1 d-flex flex-row justify-content-between mb-0"><label>Дата рождения:</label> <input class="square" type="date" required="required"></div><!-- 4) дата рождения (поле даты); -->
+      <div class="other mt-1"><label>Ваш пол: М<input type="radio" name="human" required="required"> &nbsp;&nbsp; Ж</label><input type="radio" name="human"></div><!-- 5) пол (радиокнопки); -->
+      <label class="other mt-1">Выберите любимый (-ые) ЯП: <select multiple="multiple" required="required">
+        <option value="pascal">Pascal</option>
+        <option value="c">C</option>
+        <option value="c++">C++</option>
+        <option value="jvaScript">JavaScript</option>
+        <option value="php">PHP</option>
+        <option value="python">Python</option>
+        <option value="java">Java</option>
+        <option value="haskel">Haskel</option>
+        <option value="clojure">Clojure</option>
+        <option value="prolog">Prolog</option>
+        <option value="scala">Scala</option>
+      </select></label>
+      <div class="description mt-1"><label>Расскажите о себе:<textarea class="ms-1" name="message" rows="5" cols="30" required="required"></textarea></label></div><!-- 7) биография (многострочное текстовое поле); -->
+      <label id="checkbox" class="ms-2"><input type="checkbox" required="required"> с контрактом ознакомлен (-а)</label><!-- 8) с контрактом ознакомлен (а) (чекбокс); -->
+      <input class="mb-1" type="submit" id="submit" value="Подтвердить">
+    </form> <!-- Форма -->
       </div>
+    <footer class="w-100"> <!-- Подвал -->
+      <p>© Байталенко Даниил, КубГУ, МО22/1</p>
+    </footer> <!-- Подвал -->
     </div>
-    <!--Подключение Bootstrap 5-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!--Подключение Bootstrap 5-->
   </body>
 </html>
-
-
