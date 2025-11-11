@@ -11,113 +11,198 @@ body
 {
     font-size: 0.825rem;
 }
-.mygallery
+div.all
+{ 
+    background-color: #7bffab;
+}
+a:hover {color: rgb(228, 15, 15);}
+header
 {
-    background-color: silver;
-    padding-top: 10px;
+    background-color: #F7D7B1;
 }
-.slider {
-    max-width: 100%; /* Ограничим общую ширину слайдера */
-    margin: 0 auto;
-    padding: 0 40px;
-    /* box-sizing: border-box; */
-}
-.slider .mypr
+.logo
 {
-    border: 1px solid black;
-    border-radius: 5%;
+    border-radius:100%;
 }
-.slider .slick-slide {
-    height: 300px; /* Фиксированная высота для всех слайдов */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 4px; /* Добавляем горизонтальные отступы */
+nav a
+{
+    width: 95%;
+    background-color: #ffc1c1ff;
+    border: 1px solid #000000;
+    border-radius: 10px 0;
+    
+    
+    text-decoration: none;
+    text-align: center;
+    color:#000;
+    font-size: 1.125rem;
+    font-weight: bold;
+    font-style: oblique;
 }
-
-.slider .slick-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Вся картинка видна */
-    border-radius: 5%;
+h1/*Заголовок страницы*/
+{
+    font-size: 1.25rem;
+    font-weight: bold;
 }
-
-/* Стили для стрелок */
-.slick-prev, .slick-next {
-    z-index: 1;
-    width: 40px;
+h2
+{
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+#hyperpages img
+{
+    width: 40%;
+    max-width: 300px;
+    height: fit-content;
+}
+table/*Таблица*/
+{
+    width:auto;
+    border: 3px solid black;
+    border-spacing: 0;
+    font-size: 0.725rem;
+    
+}
+tr{height: 20px;}
+tr.chet     {background-color: #3ae1ff;}
+tr.nechet   {background-color: #f1d9b2;}
+tr:first-child
+{
+    background-color: rgb(85, 181, 255);
+    font-size: 1rem;
+    font-weight: bold;
+}
+tr:nth-child(2)
+{
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+tr:nth-child(5), tr:nth-child(6), tr:nth-child(7)
+{
     height: 40px;
 }
-
-.slick-prev {
-    left: 1px;  
+tr td 
+{
+    vertical-align: middle;
+    border: 1px solid black;
+    min-width: 35px;
 }
-
-.slick-next {
-    right: 1px;
+tr:nth-child(2) td:nth-child(3), td:nth-child(4)
+{
+    width:240px;
 }
-
-.slick-prev:before, .slick-next:before {
-    font-size: 40px;
-    color: #333;
-    opacity: 0.7;
+#form
+{
+    background-color: chartreuse;
+    border: 3px solid black;
 }
-
-.slick-prev:hover:before, .slick-next:hover:before {
-    opacity: 1;
+#form h2
+{
+    align-self: center;
 }
-.custom-pager {
-    text-align: center;
-    width: 100%;
+#form .square, #submit
+{
+    border: 2px solid black;
 }
-@media (min-width: 561px) {
-    .slider {
-        max-width: 960px; /* Ограничиваем ширину на десктопе */
-    }
+#form textarea
+{
+    width: 95%;
+}
+footer
+{
+    font-style: oblique;
+    background-color: yellow;
 }
 @media (min-width:380px) {
-    body
+    body, tr:nth-child(2)
     {
         font-size: 1rem;
     }
-}
-@media (min-width:668px) {
-    body
+    h1
+    {
+        font-size: 1.5rem;
+    }
+    h2
+    {
+        font-size: 1.25rem;
+    }
+    table
+    {
+        font-size: 0.825rem;
+    }
+    tr:nth-child(1)
     {
         font-size: 1.125rem;
     }
 }
-@media screen and (min-width: 861px) {
-    body
+@media (min-width:400px){
+    #form
+    {
+        width: 360px;
+    }
+}
+@media (min-width:660px) {
+    body, tr:nth-child(2)
+    {
+        font-size: 1.125rem;
+    }
+    h1
+    {
+        font-size: 1.725rem;
+    }
+    h2
+    {
+        font-size: 1.5rem;
+    }
+    table
+    {
+        font-size: 1.0rem;
+    }
+    tr:nth-child(1)
     {
         font-size: 1.25rem;
     }
-}
-@media (max-width: 560px) {
-    .slider {
-        padding: 0 30px;
-    }
-    .slick-prev, .slick-next {
-    width: 30px;
-    height: 30px;
-}
-    .slick-prev:before, .slick-next:before {
-        font-size: 30px;
-    }
-    .slider .slick-slide {
-    height: 400px;
+    #form
+    {
+        width: 400px;
     }
 }
-@media (max-width: 360px) {
-    .slider {
-        padding: 0 25px;
+@media screen and (min-width: 860px) {
+    body, tr:nth-child(2)
+    {
+        font-size: 1.25rem;
     }
-    .slick-prev, .slick-next {
-    width: 25px;
-    height: 25px;
-}
-    .slick-prev:before, .slick-next:before {
-        font-size: 25px;
+    h1
+    {
+        font-size: 2rem;
+    }
+    h2
+    {
+        font-size: 1.75rem;
+    }
+    table
+    {
+        font-size: 1.125rem;
+    }
+    tr:nth-child(1)
+    {
+        font-size: 1.5rem;
+    }
+    tr td
+    {
+        padding: 10px;
+    }
+    tr:first-child
+    {
+        font-size: 140%;
+    }
+    tr:nth-child(2)
+    {
+        font-size: 100%;
+    }
+    #form
+    {
+        width: 440px;
     }
 }
-
