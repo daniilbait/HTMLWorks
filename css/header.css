@@ -1,0 +1,1436 @@
+/* header.css */
+
+/* Header */
+#header {
+  color: #ffffff;
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Стили для оверлея */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* Video Background */
+.video-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1000;
+  filter: blur(5px) brightness(0.3);
+}
+
+/* Header Top - fixed at bottom */
+.header-top {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menu/Navigation */
+#menu {
+  width: 100%;
+  background-color: #000000;
+  display: none; /* Hidden by default */
+}
+
+#menu.active {
+  display: block; /* Show when menu is open */
+}
+
+.nav-list {
+  width: 100%;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+}
+
+/* Navigation Items */
+.nav-item,
+.nav-list > li:not(.nav-item) {
+  width: 100%;
+  min-height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 0.825em;
+  letter-spacing: 1px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  min-height: 20px; /* ← ДОБАВЛЕНО для мобильной версии */
+}
+
+/* Dropdown specific */
+.nav-item.dropdown {
+  display: flex;
+  flex-direction: column;
+  border: none !important;
+}
+
+.dropdown .nav-link {
+  padding-right: 20px;
+}
+
+.dropdown-arrow {
+  font-size: 0.5em;
+  transition: transform 0.3s;
+}
+
+.dropdown.active .dropdown-arrow {
+  transform: rotate(90deg);
+}
+
+.dropdown-menu {
+  display: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  width: 100%;
+  min-height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  letter-spacing: 1px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-link {
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  min-height: 20px; /* ← ДОБАВЛЕНО для мобильной версии */
+}
+
+/* Hide nav-line in mobile */
+.nav-line {
+  display: none;
+}
+
+/* Mobile Top Panel */
+.header-top-mobile {
+  width: 100%;
+  height: 40px;
+  background-color: #000000;
+  padding: 0 20px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+#group_9 {
+  height: 30px;
+  width: 180px; /* 6:1 ratio */
+  display: block;
+}
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-icon {
+  width: 100%;
+  height: 100%;
+}
+
+/* Header Main Content */
+.header-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Group 7 - Main Content */
+#group_7 {
+  width: 100%;
+  padding: 20px 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Druplicon Background */
+.druplicon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(15deg);
+  z-index: -2;
+  max-width: 400px;
+}
+
+.druplicon-bg {
+  width: 100%;
+  height: auto;
+}
+
+/* Content Styles */
+.content-title {
+  font-size: 1.5em; /* 2 × 0.75em */
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.content-description {
+  font-size: 0.75em;
+  margin-bottom: 20px;
+}
+
+.content-button {
+  font-size: 1.125em; /* 1.5 × 0.75em */
+  border: 3px solid #f14d34;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+/* Statistics Group */
+#group_28 {
+  width: 100%;
+  padding: 20px 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 10px;
+  align-items: end;
+  justify-items: start;
+}
+
+/* Stat Blocks */
+.stat-block {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.stat-line {
+  width: 3px;
+  height: 80px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.stat-content {
+  margin-left: 8px; /* 5px + 3px for line width */
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-weight: 500;
+  margin-bottom: 3px;
+  font-size: 1.25em; /* 2 × 0.625em */
+}
+
+.stat-desc {
+  font-size: 0.625em;
+  margin-bottom: 10px;
+}
+
+/* Special Stat Block */
+.stat-special .stat-content {
+  width: 100%;
+}
+
+.stat-special-header {
+  font-size: 1.875em; /* 3 × 0.625em */
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.stat-special .stat-number {
+  margin-bottom: 0;
+  margin-right: 5px;
+}
+
+.stat-icon {
+  transform: scale(1.5);
+  width: 1em;
+  height: 1em;
+}
+
+/* ============================= 
+   МОБИЛЬНЫЕ СТИЛИ СЛАЙДЕРА (Mobile First - вне медиазапросов)
+============================= */
+
+/* Контейнер слайдера */
+.reviews-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 50px;
+}
+
+/* Обертка слайдов */
+.swiper-wrapper {
+  display: flex;
+  transition-timing-function: ease-in-out;
+}
+
+/* Отдельный слайд */
+.swiper-slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+}
+
+/* Отзывы на мобильных */
+.review-card,
+.simple-review {
+  padding: 25px 20px;
+  margin: 0 5px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Фиксированная высота карточки */
+  max-height: 70vh; /* Ограничение по высоте */
+}
+
+/* Текст отзыва с ограниченной высотой и прокруткой */
+.review-text {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px;
+}
+
+/* Стилизация скроллбара */
+.review-text::-webkit-scrollbar {
+  width: 4px;
+}
+
+.review-text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.review-text::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.review-text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.review-text p,
+.simple-review p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Простые отзывы тоже с ограниченной высотой */
+.simple-review-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-right: 10px;
+}
+
+.simple-review-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.simple-review-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.simple-review-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.simple-review-author {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-top: auto; /* Прижимаем автора к низу */
+}
+
+/* Стрелки на мобильных */
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: #3498db;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #2980b9;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.swiper-button-prev {
+  left: 5px;
+}
+
+.swiper-button-next {
+  right: 5px;
+}
+
+.swiper-button-prev::after {
+  content: "❮"; /* Левая стрелка */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.swiper-button-next::after {
+  content: "❯"; /* Правая стрелка */
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Media Queries for sm (568px and above) */
+@media (min-width: 568px) {
+  .nav-item,
+  .nav-list > li:not(.nav-item) {
+    min-height: 30px;
+  }
+
+  .header-top-mobile {
+    height: 60px;
+    padding: 0 20px 0 10px;
+  }
+
+  .nav-list {
+    max-height: calc(100vh - 60px);
+  }
+
+  #group_9 {
+    height: 45px;
+    width: 270px;
+  }
+
+  .mobile-menu-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .druplicon {
+    max-width: 600px;
+  }
+
+  .content-title {
+    font-size: 2em; /* 2 × 1em */
+  }
+
+  .content-description {
+    font-size: 1em;
+  }
+
+  .content-button {
+    font-size: 1.5em; /* 1.5 × 1em */
+  }
+
+  #group_28 {
+    gap: 50px 20px;
+  }
+
+  .stat-number {
+    font-size: 1.5em; /* 2 × 0.75em */
+  }
+
+  .stat-desc {
+    font-size: 0.75em;
+  }
+
+  .stat-special-header {
+    font-size: 2.25em; /* 3 × 0.75em */
+  }
+
+  .dropdown-menu li {
+    min-height: 30px;
+  }
+
+  .nav-link,
+  .dropdown-link {
+    min-height: 30px; /* ← ДОБАВЛЕНО для sm-версии */
+  }
+  .nav-item,
+  .nav-list > li:not(.nav-item),
+  .dropdown-menu li {
+    letter-spacing: 1.5px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Общие стили для десктопной шапки */
+  #header {
+    position: relative;
+    min-height: 100vh;
+    color: white;
+    overflow: hidden;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* Убрал синий градиентный фон */
+  }
+
+  /* Видеофон - стили для десктопа */
+  .video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0.4;
+    filter: brightness(0.5) contrast(1.2);
+  }
+
+  /* Затемнение поверх видео */
+  #header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Просто черный с прозрачностью */
+    z-index: 2;
+  }
+
+  /* Верхняя часть шапки */
+  .header-top {
+    position: relative;
+    z-index: 4;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  /* ============================= 
+       НАВИГАЦИЯ ДЛЯ ДЕСКТОПА (от 768px)
+    ============================= */
+
+  /* Основная навигация - показываем на десктопе */
+  #menu {
+    display: block !important;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Список навигации - горизонтальный на десктопе */
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: none !important;
+    overflow-y: visible !important;
+  }
+
+  /* Элементы навигации для десктопа */
+  .nav-item,
+  .nav-list > li:not(.nav-item) {
+    flex: 0 1 auto;
+    min-height: auto !important;
+    border: none !important;
+    font-size: 0.75rem; /* Уменьшаем шрифт для компактности */
+    letter-spacing: 0.5px;
+    text-align: center;
+    display: block;
+    position: relative;
+    padding: 0 5px; /* Уменьшаем отступы */
+  }
+
+  /* Ссылки навигации для десктопа */
+  .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #e0e1dd;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 10px !important; /* Уменьшаем padding */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    white-space: nowrap;
+    min-height: auto !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  .nav-link:hover {
+    color: #64b5f6;
+    background: rgba(100, 181, 246, 0.1);
+    border-radius: 4px;
+  }
+
+  /* Элемент с подчеркиванием - только для десктопа */
+  .with-line {
+    position: relative;
+  }
+
+  .with-line .nav-link {
+    color: #64b5f6;
+  }
+
+  .nav-line {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: #64b5f6;
+    opacity: 0.8;
+    display: block !important; /* Показываем на десктопе */
+  }
+
+  /* ============================= 
+       ВЫПАДАЮЩИЕ МЕНЮ ДЛЯ ДЕСКТОПА
+    ============================= */
+
+  /* Стрелка выпадающего меню */
+  .dropdown-arrow {
+    font-size: 0.6rem;
+    margin-left: 4px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+  }
+
+  /* Выпадающее меню на десктопе - при наведении */
+  .nav-item.dropdown {
+    position: relative;
+    display: block;
+    border: none !important;
+  }
+
+  /* Основное выпадающее меню для десктопа */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    margin: 5px 0 0 0;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: block !important; /* Всегда block на десктопе */
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Ссылки в выпадающем меню для десктопа */
+  .dropdown-link {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .dropdown-link:hover {
+    background: #f0f7ff;
+    color: #1b263b;
+    padding-left: 20px;
+  }
+
+  /* ============================= 
+       МОБИЛЬНАЯ ПАНЕЛЬ (скрываем на десктопе)
+    ============================= */
+
+  /* На десктопе скрываем мобильную панель */
+  .header-top-mobile {
+    display: none !important;
+  }
+
+  /* ============================= 
+       ОСНОВНОЙ КОНТЕНТ ШАПКИ (десктоп)
+    ============================= */
+
+  .header-main {
+    position: relative;
+    z-index: 3;
+    padding: 60px 20px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+
+  .main-content {
+    text-align: left;
+    flex: 1;
+    max-width: 50%;
+    position: relative;
+    z-index: 3;
+    padding-right: 20px;
+  }
+
+  /* Druplicon фон */
+  .druplicon {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 250px; /* Уменьшаем для экономии места */
+    height: 250px;
+    opacity: 0.1;
+    z-index: -1;
+  }
+
+  .druplicon-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Заголовок и описание */
+  .content-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .content-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #b0bec5;
+    margin-bottom: 25px;
+    max-width: 500px;
+  }
+
+  /* Кнопка Тарифы */
+  .content-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #64b5f6 0%, #2196f3 100%);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+  }
+
+  .content-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+    background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  }
+
+  /* ============================= 
+       СЕТКА СТАТИСТИКИ ДЛЯ ДЕСКТОПА
+    ============================= */
+
+  .statistics {
+    flex: 1;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Карточки статистики */
+  .stat-block {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 15px 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 140px;
+  }
+
+  .stat-block:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-5px);
+    border-color: rgba(100, 181, 246, 0.3);
+  }
+
+  /* Особый блок статистики (первый) */
+  .stat-special {
+    background: rgba(100, 181, 246, 0.15);
+    border-color: rgba(100, 181, 246, 0.4);
+  }
+
+  .stat-special:hover {
+    background: rgba(100, 181, 246, 0.2);
+  }
+
+  /* Линия в карточке статистики */
+  .stat-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #64b5f6, #2196f3, #64b5f6);
+  }
+
+  /* Контент внутри карточки статистики */
+  .stat-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Заголовок для особого блока */
+  .stat-special-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #64b5f6;
+    line-height: 1;
+  }
+
+  .stat-special .stat-number {
+    color: #ffeb3b;
+    text-shadow: 0 0 10px rgba(255, 235, 59, 0.3);
+  }
+
+  .stat-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .stat-desc {
+    font-size: 0.75rem;
+    line-height: 1.2;
+    color: #b0bec5;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+  }
+
+  /* Для обычных блоков статистики */
+  .stat-block:not(.stat-special) .stat-content {
+    padding-top: 8px;
+  }
+
+  /* Контейнер слайдера */
+  .reviews-slider {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 40px;
+  }
+
+  /* Обертка слайдов */
+  .swiper-wrapper {
+    display: flex;
+    transition-timing-function: ease-in-out;
+  }
+
+  /* Отдельный слайд */
+  .swiper-slide {
+    flex: 0 0 calc(33.333% - 20px);
+    margin-right: 30px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Выравнивание всех слайдов по верху */
+  .swiper-slide > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Существующий отзыв-карточка */
+  .review-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-text {
+    flex-grow: 1;
+    margin-bottom: 25px;
+    line-height: 1.7;
+  }
+
+  /* Простые отзывы - приводим к общему стилю */
+  .simple-review {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .simple-review h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+
+  .simple-review-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 15px;
+  }
+
+  .simple-review-content p {
+    line-height: 1.6;
+    color: #555;
+    margin: 0 0 15px 0;
+  }
+
+  .simple-review-author {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: auto;
+  }
+
+  .simple-review p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .simple-review-author {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-style: italic;
+    color: #7f8c8d;
+  }
+
+  /* Стрелки навигации */
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #3498db;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 10px rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background: #2980b9;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* Скрытие стрелок на крайних позициях (если не loop) */
+  .swiper-button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  /* ============================= 
+       АДАПТИВНОСТЬ ДЛЯ БОЛЬШИХ ЭКРАНОВ
+    ============================= */
+
+  /* Адаптация для ноутбуков (1200px и меньше) */
+  @media (max-width: 1200px) {
+    .content-title {
+      font-size: 2.5rem;
+    }
+
+    .statistics {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 900px;
+      gap: 15px;
+    }
+
+    .stat-block {
+      min-height: 170px;
+    }
+
+    /* Уменьшаем навигацию для ноутбуков */
+    .nav-item,
+    .nav-list > li:not(.nav-item) {
+      font-size: 0.7rem;
+      padding: 0 4px;
+    }
+
+    .nav-link {
+      padding: 7px 8px !important;
+    }
+    .header-main {
+      gap: 30px;
+      padding: 50px 20px 30px;
+    }
+
+    .content-title {
+      font-size: 2rem;
+    }
+
+    .druplicon {
+      width: 200px;
+      height: 200px;
+      left: 25%;
+    }
+
+    .stat-block {
+      min-height: 130px;
+      padding: 12px 10px;
+    }
+
+    .stat-number {
+      font-size: 1.6rem;
+    }
+  }
+
+  /* Адаптация для планшетов (992px и меньше, но от 768px) */
+  @media (max-width: 992px) and (min-width: 768px) {
+    .statistics {
+      grid-template-columns: repeat(2, 1fr);
+      max-width: 600px;
+    }
+
+    .content-title {
+      font-size: 2.2rem;
+    }
+
+    .content-description {
+      font-size: 1rem;
+      padding: 0 20px;
+    }
+
+    .druplicon {
+      width: 300px;
+      height: 300px;
+    }
+
+    /* Уменьшаем навигацию для планшетов */
+    .nav-list {
+      justify-content: space-around;
+    }
+
+    .nav-item,
+    .nav-list > li:not(.nav-item) {
+      font-size: 0.65rem;
+      padding: 0 3px;
+    }
+
+    .nav-link {
+      padding: 6px 7px !important;
+    }
+    .header-main {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .main-content {
+      max-width: 100%;
+      text-align: center;
+      padding-right: 0;
+    }
+
+    .statistics {
+      max-width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .druplicon {
+      left: 50%;
+      width: 250px;
+      height: 250px;
+    }
+
+    .content-title {
+      font-size: 2.2rem;
+    }
+    .review-card,
+    .simple-review {
+      height: 450px;
+      padding: 25px 20px;
+    }
+  }
+
+  /* ============================= 
+       АНИМАЦИИ ДЛЯ ДЕСКТОПА
+    ============================= */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Анимация появления элементов */
+  .main-content {
+    animation: fadeIn 1s ease-out;
+  }
+
+  .content-title {
+    animation: slideInUp 0.8s ease-out 0.2s both;
+  }
+
+  .content-description {
+    animation: slideInUp 0.8s ease-out 0.4s both;
+  }
+
+  .content-button {
+    animation: slideInUp 0.8s ease-out 0.6s both;
+  }
+
+  /* Анимация для статистики с задержкой */
+  .stat-block {
+    animation: slideInUp 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .stat-block:nth-child(1) {
+    animation-delay: 0.7s;
+  }
+  .stat-block:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+  .stat-block:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+  .stat-block:nth-child(4) {
+    animation-delay: 1s;
+  }
+  .stat-block:nth-child(5) {
+    animation-delay: 1.1s;
+  }
+  .stat-block:nth-child(6) {
+    animation-delay: 1.2s;
+  }
+
+  /* ============================= 
+       УТИЛИТНЫЕ КЛАССЫ ДЛЯ ДЕСКТОПА
+    ============================= */
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  /* ============================= 
+       ДОПОЛНИТЕЛЬНЫЕ ЭФФЕКТЫ ДЛЯ ДЕСКТОПА
+    ============================= */
+
+  /* Эффект при наведении на карточки статистики */
+  .stat-block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    transition: left 0.6s ease;
+  }
+
+  .stat-block:hover::before {
+    left: 100%;
+  }
+
+  /* Плавный скролл для якорных ссылок */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Фикс для скролла на iOS */
+  @supports (-webkit-touch-callout: none) {
+    .header-main {
+      min-height: -webkit-fill-available;
+    }
+  }
+
+  /* ДОБАВЬТЕ СЮДА: */
+
+  .reviews-slider {
+    padding: 20px 60px;
+  }
+
+  /* Отдельный слайд - 3 на экране */
+  .swiper-slide {
+    flex: 0 0 calc(33.333% - 20px);
+    width: auto; /* Переопределяем мобильное width: 100% */
+    margin-right: 30px;
+    height: auto;
+  }
+
+  /* Выравнивание всех слайдов по верху */
+  .swiper-slide > * {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Существующий отзыв-карточка */
+  .review-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 500px; /* Выше на десктопе */
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-text {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 15px;
+    line-height: 1.7;
+  }
+
+  /* Улучшенные скроллбары для десктопа */
+  .review-text::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .review-text::-webkit-scrollbar-track {
+    background: #f5f5f5;
+    border-radius: 3px;
+  }
+
+  .review-text::-webkit-scrollbar-thumb {
+    background: #3498db;
+    border-radius: 3px;
+  }
+
+  .review-text::-webkit-scrollbar-thumb:hover {
+    background: #2980b9;
+  }
+
+  /* Простые отзывы */
+  .simple-review {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 500px;
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .simple-review h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+
+  .simple-review p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .simple-review-author {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-style: italic;
+    color: #7f8c8d;
+  }
+
+  /* Стрелки на десктопе */
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+  }
+
+  .swiper-button-next {
+    right: 0;
+  }
+
+  /* Адаптация для планшетов (внутри десктопного медиазапроса) */
+  @media (max-width: 992px) {
+    .reviews-slider {
+      padding: 20px 50px;
+    }
+
+    .swiper-slide {
+      flex: 0 0 calc(33.333% - 15px);
+      margin-right: 22px;
+    }
+
+    .review-card,
+    .simple-review {
+      padding: 25px 20px;
+    }
+  }
+}

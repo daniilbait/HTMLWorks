@@ -1,0 +1,271 @@
+/* ============================= 
+   ФОРМА (Mobile First)
+   Прозрачный фон формы, белые поля
+============================= */
+
+/* Стили только для элементов внутри формы */
+.support-form {
+  background: transparent; /* Прозрачный фон формы */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Группы полей (ряды) */
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Отдельная группа поля */
+.form-group {
+  width: 100%;
+}
+
+/* Метки полей */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333; /* Темный цвет текста меток */
+  font-size: 0.95rem;
+}
+
+/* Поля ввода - БЕЛЫЕ */
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  font-family: inherit;
+  background: #fff; /* Белый фон полей */
+  color: #333; /* Темный текст в полях */
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #999;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+/* Счетчик символов */
+.form-counter {
+  text-align: right;
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Чекбокс согласия - на сером фоне */
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px;
+  background: #f5f5f5; /* Серый фон как на макетах */
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-top: 3px;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.checkbox-label {
+  font-size: 0.9rem;
+  color: #333; /* Темный текст */
+  line-height: 1.4;
+}
+
+/* Капча - на сером фоне */
+.captcha-section {
+  padding: 15px;
+  background: #f5f5f5; /* Серый фон как на макетах */
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.captcha-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333; /* Темный текст */
+  font-size: 0.95rem;
+}
+
+.captcha-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.captcha-box {
+  background: #fff; /* Белый фон для капчи */
+  padding: 12px 20px;
+  text-align: center;
+  font-family: monospace;
+  letter-spacing: 2px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 200px;
+  border: 1px solid #ddd;
+  color: #333; /* Темный текст в капче */
+}
+
+.captcha-links {
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+}
+
+.captcha-links a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.captcha-links a:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка отправки - ЧЕРНАЯ */
+.submit-btn {
+  padding: 16px;
+  background: #000; /* Черный фон как на макетах */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background: #333;
+}
+
+.submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Сообщения об ошибках */
+.form-error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  min-height: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.form-error.show {
+  opacity: 1;
+}
+
+/* ============================= 
+   ДЕСКТОПНАЯ ВЕРСИЯ ФОРМЫ (768px и выше)
+============================= */
+
+@media (min-width: 768px) {
+  /* Поля в строку на десктопе */
+  .form-row {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  /* Чекбокс и капча - больше отступов */
+  .form-checkbox,
+  .captcha-section {
+    /* padding: 20px; */
+  }
+
+  /* Кнопка - больше */
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 18px;
+  }
+}
+
+/* ============================= 
+   БОЛЬШИЕ ЭКРАНЫ
+============================= */
+
+@media (min-width: 992px) {
+  .support-form {
+    gap: 25px;
+  }
+
+  .form-row {
+    gap: 25px;
+  }
+}
+
+/* ============================= 
+   АНИМАЦИЯ ТРЯСКИ
+============================= */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.form-input.shake,
+.form-textarea.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+/* ============================= 
+   ВАЛИДАЦИЯ (опционально, если нужна)
+============================= */
+
+.form-input:invalid:not(:focus):not(:placeholder-shown),
+.form-textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #e74c3c;
+}
+
+.form-input:valid:not(:focus):not(:placeholder-shown),
+.form-textarea:valid:not(:focus):not(:placeholder-shown) {
+  border-color: #2ecc71;
+}
